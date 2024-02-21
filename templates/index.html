@@ -1,4 +1,25 @@
 {% extends "base.html" %}
+
+{% block header_content %}
+<div class="max-w-6xl mx-auto flex flex-col items-center justify-center relative z-10">
+    <h1 class="text-4xl font-bold mb-4 tracking-wide">
+      <span> 👋 Hey Hey! I'm <br></span>
+      <span id="rainbow-text" class="hover:bg-gradient-to-br hover:from-blue-900 hover:to-blue-500 hover:bg-clip-text hover:text-transparent transition-all"><span class="sm:text-7xl md:text-9xl font-extrabold hover:text-[#DAFF7D]">Danish Siddiqui</span></span>
+    </h1>
+    <p class="text-lg mb-8">Math + Statistics major with a minor in Economics at the University of Toronto</p>
+    <p class="text-lg mb-8">Aspiring Data Scientist</p>
+    <div class="flex space-x-4">
+      <a href="/projects" class="bg-white text-[#5F0F40] hover:bg-[#5F0F40] hover:text-white py-2 px-6 rounded-lg transition duration-300 ease-in-out text-lg font-semibold">View Projects</a>
+      <a href="https://drive.google.com/file/d/1rjhwSRfw-W9TMjWBydwmwFRKQcCoMjWh/view?usp=sharing" class="bg-white text-[#5F0F40] hover:bg-[#5F0F40] hover:text-white py-2 px-6 rounded-lg transition duration-300 ease-in-out text-lg font-semibold">Resume</a>
+    </div>
+  </div>
+  <div id="gradient-overlay" class="absolute inset-0 bg-gradient-to-br from-[#03045e] to-[#0077b6] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+  {% endblock %}
+
+
+
+
 {% block body_content %}
 
 <div class="grid lg:grid-cols-3 sm:grid-cols-1 gap-5">
@@ -87,4 +108,4 @@
 
 <script src="{{url_for('static', filename='scripts/headerHover.js')}}"></script>
 
-{% endblock}
+{% endblock %}
