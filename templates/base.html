@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 
-<nav class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] py-4">
+<nav class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] py-4 fixed top-0 w-full z-50 left-0">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-6">
       <!-- Logo -->
       <a href="#" class="text-[#FDFFFC] hover:text-[#fb8b24] text-lg font-semibold">Danish!</a>
@@ -24,7 +24,7 @@
           <a href="#" class="text-[#FDFFFC] hover:text-[#5F0F40] transition duration-300 ease-in-out">Projects</a>
         </li>
         <li>
-          <a href="#" class="text-[#FDFFFC] hover:text-white transition duration-300 ease-in-out">Resume</a>
+          <a href="#" class="text-[#FDFFFC] hover:text-[#5F0F40] transition duration-300 ease-in-out">Resume</a>
         </li>
       </ul>
     </div>
@@ -37,17 +37,104 @@
         <span> 👋 Hey Hey! I'm <br></span>
         <span id="rainbow-text" class="hover:bg-gradient-to-br hover:from-blue-900 hover:to-blue-500 hover:bg-clip-text hover:text-transparent transition-all"><span class="text-9xl font-extrabold hover:text-[#DAFF7D]">Danish Siddiqui</span></span>
       </h1>
-      <p class="text-lg mb-8">Math and Stats major with a minor in Economics at the University of Toronto</p>
+      <p class="text-lg mb-8">Math + Statistics major with a minor in Economics at the University of Toronto</p>
       <p class="text-lg mb-8">Aspiring Data Scientist</p>
       <div class="flex space-x-4">
         <a href="#" class="bg-white text-[#5F0F40] hover:bg-[#5F0F40] hover:text-white py-2 px-6 rounded-lg transition duration-300 ease-in-out text-lg font-semibold">View Projects</a>
-        <a href="#" class="bg-white text-[#5F0F40] hover:bg-[#5F0F40] hover:text-white py-2 px-6 rounded-lg transition duration-300 ease-in-out text-lg font-semibold">Contact Me</a>
+        <a href="#" class="bg-white text-[#5F0F40] hover:bg-[#5F0F40] hover:text-white py-2 px-6 rounded-lg transition duration-300 ease-in-out text-lg font-semibold">Resume</a>
       </div>
     </div>
     <div id="gradient-overlay" class="absolute inset-0 bg-gradient-to-br from-[#03045e] to-[#0077b6] opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  </header>
+</header>
   
-<body>
+<body class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] text-[#E3D8F1] py-12 px-6 relative ">
+    
+    <div class="grid grid-cols-3 gap-5">
+        <a href="#" class="block max-w-sm p-6 bg-[#5F0F40] border border-gray-200 rounded-lg shadow hover:bg-[#9B5DE5] hover:text-[#5F0F40] m-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FDFFFC]">Data Tools</h5>
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                R
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                Python
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                SQL
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                Pandas
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                JSON
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                APIs
+            </span>
+
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                Jupyter Notebook
+            </span>
+
+        </a>
+
+        <a href="#" class="block max-w-sm p-6 bg-[#5F0F40] border border-gray-200 rounded-lg shadow hover:bg-[#9B5DE5] hover:text-[#5F0F40] m-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FDFFFC]">Learning Algorithms</h5>
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                Linear Regression
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                Logistic Regression
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                Random Forest
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                Decision Trees
+            </span>
+
+        </a>
+
+        <a href="#" class="block max-w-sm p-6 bg-[#5F0F40] border border-gray-200 rounded-lg shadow hover:bg-[#9B5DE5] hover:text-[#5F0F40] m-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FDFFFC]">Data Visualization & Analysis</h5>
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                Hypothesis Testing
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                PowerBI
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                ggplot2
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                Correlation Analysis
+            </span>
+
+            <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+                Data Cleaning
+            </span>
+
+
+        </a>
+
+    </div>
+    
+    <h2 class="text-2xl font-medium mb-3 tracking-wide">Relevant Coursework</h2>
+    
+    
     <script src="{{url_for('static', filename='scripts/headerHover.js')}}"></script>
+</body>
+
 
 </html>
