@@ -1,1 +1,90 @@
 {% extends "base.html" %}
+{% block body_content %}
+
+<div class="grid lg:grid-cols-3 sm:grid-cols-1 gap-5">
+    <a href="#" class="block max-w-sm p-6 bg-[#5F0F40] border border-gray-200 rounded-lg shadow hover:bg-[#9B5DE5] hover:text-[#5F0F40] m-5">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FDFFFC]">Data Tools</h5>
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            R
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            Python
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            SQL
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            Pandas
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            JSON
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            APIs
+        </span>
+
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            Jupyter Notebook
+        </span>
+
+    </a>
+
+    <a href="#" class="block max-w-sm p-6 bg-[#5F0F40] border border-gray-200 rounded-lg shadow hover:bg-[#9B5DE5] hover:text-[#5F0F40] m-5">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FDFFFC]">Learning Algorithms</h5>
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            Linear Regression
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            Logistic Regression
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            Random Forest
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            Decision Trees
+        </span>
+
+    </a>
+
+    <a href="#" class="block max-w-sm p-6 bg-[#5F0F40] border border-gray-200 rounded-lg shadow hover:bg-[#9B5DE5] hover:text-[#5F0F40] m-5">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FDFFFC]">Data Visualization & Analysis</h5>
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            Hypothesis Testing
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            PowerBI
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            ggplot2
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            Correlation Analysis
+        </span>
+
+        <span class="inline-block whitespace-nowrap rounded-full bg-[#8FE388] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-[#5f0f40]">
+            Data Cleaning
+        </span>
+
+
+    </a>
+
+</div>
+
+<h2 class="text-2xl font-medium mb-3 tracking-wide">Relevant Coursework</h2>
+
+
+<script src="{{url_for('static', filename='scripts/headerHover.js')}}"></script>
+
+{% endblock}
