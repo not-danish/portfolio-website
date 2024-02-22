@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block header_content %} 
+<header class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] text-[#E3D8F1] py-8 px-6 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto flex flex-col text-left relative z-10">
+        <h1 class="text-5xl font-bold mb-4">
+        <span> 💼 Professional <br></span>
+        <span id="rainbow-text" class="hover:bg-clip-text hover:text-transparent transition-all"><span class="sm:text-7xl md:text-8xl font-extrabold hover:text-[#DAFF7D]">Experience</span></span>
+        </h1>
+        <p class="text-lg mb-8">All of my previous work experience, highlighted in one page</p>
+    </div>
+    <div id="gradient-overlay" class="opacity-0 pointer-events-none transition-opacity duration-300"></div>
+</header>
+{% endblock %}
+
+{% block body_content %}
+<div class="bg-transparent shadow-md rounded-md p-6 mb-6 grid gap-6 sm:grid-cols-1 md:grid-cols-2 opacity-100">
+
+    <!-- SNSC @ UTSC -->
+    <div class="bg-white opacity-85 border border-gray-200 rounded-md p-4 transition duration-300 ease-in-out transform hover:shadow-lg hover:-translate-y-1">
+        <h3 class="text-lg font-medium text-[#5f0f40] mb-2">Data Insights & Visualization Analyst</h3>
+        <p class="text-gray-800 font-bold mb-1"> Catholic Crosscultural Services | June 2023 - Present</p>
+        <p class="text-gray-800 italic mb-2">Scarborough Newcomer Settlement Collective Project (SNSC) | RStudio, PowerBI, RedCap</p>
+        <ul class="list-disc ml-6">
+            <li class="text-gray-800 mb-1">
+                Led data management for SNSC project with CCS. Orchestrated survey data extraction, cleaning, and filtering for accuracy. Developed engaging PowerBI and Tableau dashboards to visualize Statistics Canada Employment data, illustrating challenges of Toronto newcomers.
+            </li>
+            <li class="text-gray-800">
+                Transformed data for improved analysis efficiency. Created impactful RStudio visualizations to communicate trends in newcomer and immigrant needs, aiding stakeholder understanding.
+            </li>
+        </ul>
+    </div>
+
+    <!-- SDDH @ UTSC -->
+    <div class="bg-white opacity-85 border border-gray-200 rounded-md p-4 transition duration-300 ease-in-out transform hover:shadow-lg hover:-translate-y-1">
+        <h3 class="text-lg font-medium text-[#5f0f40] mb-2">Data QA</h3>
+        <p class="text-gray-800 font-bold mb-1"> University of Toronto | September 2023 - December 2023</p>
+        <p class="text-gray-800 italic mb-2">Service Delivery Data Hub (SDDH) Project | Jupyter Notebook, CSV, JSON, Python</p>
+        <ul class="list-disc ml-6">
+            <li class="text-gray-800 mb-1">
+                Established standardized QA procedures to ensure data accuracy and integrity in the NIC platform within the SDDH project.
+            </li>
+            <li class="text-gray-800">
+                Advocated for migrating to JSON format to enhance data management, storage, retrieval methods, and analytical compatibility. Improved code quality by implementing linting practices and transitioning code elements to standardized camelCase format.
+            </li>
+        </ul>
+    </div>
+
+    <!-- Registrar's Office Project @ UTSC -->
+    <div class="bg-white opacity-85 border border-gray-200 rounded-md p-4 transition duration-300 ease-in-out transform hover:shadow-lg hover:-translate-y-1">
+        <h3 class="text-lg font-medium text-[#5f0f40] mb-2">Data Analyst</h3>
+        <p class="text-gray-800 font-bold mb-1"> University of Toronto | June 2023 - September 2023</p>
+        <p class="text-gray-800 italic mb-2">Registrar’s Office Admissions Project | Python, Flask, Javascript, RStudio</p>
+        <ul class="list-disc ml-6">
+            <li class="text-gray-800 mb-1">
+                Spearheaded the establishment and implementation of standardized QA procedures for data accuracy in the NIC platform within the SDDH project.
+            </li>
+            <li class="text-gray-800">
+                Advocated for technology migration to JSON format over CSV, optimizing data management, storage, retrieval methods, and compatibility for various analytical requirements. Improved code quality by implementing linting practices and transitioning code elements to standardized camelCase format.
+            </li>
+        </ul>
+    </div>
+
+    <!-- Sports Data @ UTSC -->
+        <div class="bg-white opacity-85 border border-gray-200 rounded-md p-4 transition duration-300 ease-in-out transform hover:shadow-lg hover:-translate-y-1">
+            <h3 class="text-lg font-medium text-[#5f0f40] mb-2">BRIDGE Student Assistant, Sports Data Lead</h3>
+            <p class="text-gray-800 font-bold mb-1"> University of Toronto | September 2022 - June 2023</p>
+            <p class="text-gray-800 italic mb-2">The BRIDGE Finance Lab | Python, SQL</p>
+            <ul class="list-disc ml-6">
+                <li class="text-gray-800 mb-1">
+                    Developed comprehensive Python scripts for a 4-Part Data Analytics Series; generated numerous helper functions to collect data from an API which was later exported to a csv for further analysis.                </li>
+                <li class="text-gray-800">
+                    Led an introductory SQL workshop, delivered to 25+ participants. Various databases were accessed through an online API, pertaining to the FIFA World Cup, to teach data cleaning and management.                </li>
+            </ul>
+        </div>
+
+</div>
+
+  
+  
+  
+  
+
+{% endblock %}
