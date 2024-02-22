@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
 {% block header_content %} 
-<div class="max-w-6xl mx-auto flex flex-col teft-left relative z-10">
-    <h1 class="text-5xl font-bold mb-4">
-      <span> 📊 Data Science <br></span>
-      <span id="rainbow-text" class="hover:bg-clip-text hover:text-transparent transition-all"><span class="sm:text-7xl md:text-8xl font-extrabold hover:text-[#DAFF7D]">Projects</span></span>
-    </h1>
-    <p class="text-lg mb-8">In this page, you'll find some of the data science projects I've worked on, including personal projects and coursework.</p>
-  </div>
-  <div id="gradient-overlay" class="opacity-0 pointer-events-none transition-opacity duration-300"></div>
+<header class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] text-[#E3D8F1] py-8 px-6 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto flex flex-col text-left relative z-10">
+        <h1 class="text-5xl font-bold mb-4">
+        <span> 📊 Data Science <br></span>
+        <span id="rainbow-text" class="hover:bg-clip-text hover:text-transparent transition-all"><span class="sm:text-7xl md:text-8xl font-extrabold hover:text-[#DAFF7D]">Projects</span></span>
+        </h1>
+        <p class="text-lg mb-8">In this page, you'll find some of the data science projects I've worked on, including personal projects and coursework.</p>
+    </div>
+    <div id="gradient-overlay" class="opacity-0 pointer-events-none transition-opacity duration-300"></div>
+</header>
 {% endblock %}
-
-
 
 {% block body_content %}
 
