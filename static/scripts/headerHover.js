@@ -6,7 +6,6 @@ document.getElementById('rainbow-text').addEventListener('mousemove', function (
   const gradientOverlay = document.getElementById('gradient-overlay');
   gradientOverlay.style.backgroundImage = `radial-gradient(circle at ${xPosition}% ${yPosition}%, rgba(0,0,0,0), rgba(0,0,0,0.2))`;
   gradientOverlay.style.opacity = 1;
-  console.log("TEST");
 });
 
 document.getElementById('rainbow-text').addEventListener('mouseleave', function () {
