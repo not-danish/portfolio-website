@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 
+{% block header_content %} 
+<div class="max-w-6xl mx-auto flex flex-col teft-left relative z-10">
+    <h1 class="text-5xl font-bold mb-4">
+      <span> 📊 Data Science <br></span>
+      <span id="rainbow-text" class="hover:bg-clip-text hover:text-transparent transition-all"><span class="sm:text-7xl md:text-8xl font-extrabold hover:text-[#DAFF7D]">Projects</span></span>
+    </h1>
+    <p class="text-lg mb-8">In this page, you'll find some of the data science projects I've worked on, including personal projects and coursework.</p>
+  </div>
+  <div id="gradient-overlay" class="opacity-0 pointer-events-none transition-opacity duration-300"></div>
+{% endblock %}
+
+
+
 {% block body_content %}
 
+<div class="grid lg:grid-cols-3 sm:grid-cols-1">
+    {% for project in projects %}
+    {% include 'components/projects_card.html' %}
+    {% endfor %}
+</div>
 
 {% endblock %}
