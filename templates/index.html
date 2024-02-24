@@ -8,7 +8,7 @@
       <span id="rainbow-text" class="hover:bg-gradient-to-br hover:from-blue-900 hover:to-blue-500 hover:bg-clip-text hover:text-transparent transition-all"><span class="sm:text-7xl md:text-9xl font-extrabold hover:text-[#DAFF7D]">Danish Siddiqui</span></span>
     </h1>
     <p class="text-lg mb-8">Math + Statistics major with a minor in Economics at the University of Toronto</p>
-    <p class="text-lg mb-8">Aspiring Data Scientist</p>
+    <p id="aspiring_text" class="text-2xl mb-8 transition-opacity duration-1000">Aspiring Data Scientist</p>
 
     <div class="flex space-x-4">
       <a href="/projects" class="bg-white text-[#5F0F40] hover:bg-[#5F0F40] hover:text-white py-2 px-6 rounded-lg transition duration-300 ease-in-out text-lg font-semibold">View Projects</a>
@@ -104,5 +104,7 @@
 </div>
 
 <script src="{{url_for('static', filename='scripts/headerHover.js')}}"></script>
+<script src="{{url_for('static', filename='scripts/aspiringAnimation.js')}}"></script>
+
 
 {% endblock %}
