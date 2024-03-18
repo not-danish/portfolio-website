@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./templates/*"],
+  content: [
+    "./templates/*.html", 
+    "!./templates/celestial_body.html",
+    "./templates/components/*.html"],
   theme: {
     extend: {},
   },
   plugins: [],
 }
-
