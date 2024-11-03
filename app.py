@@ -6,8 +6,8 @@ app = Flask(__name__)
 def index():
     return(render_template("index.html"))
 
-@app.route('/projects')
-def projects():
+@app.route('/projects/data')
+def datascience():
     projects = [
              {
             'topic': 'Linear Regression | R',
@@ -31,6 +31,10 @@ def projects():
 
     return(render_template("projects.html", 
                            projects = projects))
+
+@app.route('/projects/webdev')
+def webdev():
+    return(render_template("webdev.html")) 
 
 @app.route("/celestial")
 def celestial():
