@@ -9,7 +9,20 @@ def index():
 @app.route('/projects/data')
 def datascience():
     projects = [
-             {
+        {
+            'topic': 'KNN | Decision Trees | Python',
+            'title': "Identifying Factors that affect an Ebay Auction's Competitiveness",
+            'subtitle': (
+                "This project analyzed eBay auction data to predict whether listings would be competitive "
+                "using K-Nearest Neighbors (KNN), and Decision Tree models.<br><br>"
+                "The KNN model (K=15, 5-fold cross-validation) achieved 65.9% accuracy, while the Decision Tree "
+                "(pruned using GridSearchCV) achieved ~71% accuracy on both training and test sets. "
+                "Key predictors included opening price and seller rating, with low opening prices (<$3.60) and "
+                "high seller ratings increasing competitiveness."
+            ),
+            'link': 'https://drive.google.com/file/d/1hrJmeCqfXRfiklkh5_9xh37pEchJ6qtR/view?usp=sharing'
+        },
+        {
             'topic': 'Linear Regression | R',
             'title': 'Constructing a Model to Predict Video Game Sales',
             'subtitle': 'This dataset has information like the sales and playtime of video games that were released between 2004 and 2010. The project modelled the factors that influence video game sales. Remedial measures were considered. ',
