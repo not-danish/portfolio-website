@@ -1,84 +1,117 @@
 {% extends "base.html" %}
 
-{% block header_content %} 
-<header class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] text-[#E3D8F1] py-8 px-6 relative overflow-hidden">
+{% block header_content %}
+<header class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] text-[#E3D8F1] relative overflow-hidden hero-dots" style="padding: 64px 24px 48px;">
     <div class="max-w-6xl mx-auto flex flex-col text-left relative z-10">
-        <h1 class="text-5xl font-bold mb-4">
-        <span> 💼 Professional <br></span>
-        <span id="rainbow-text" class="hover:bg-clip-text hover:text-transparent transition-all"><span class="sm:text-7xl md:text-8xl font-extrabold hover:text-[#DAFF7D]">Experience</span></span>
+        <div class="section-eyebrow mb-3">Career · Work History</div>
+        <h1 class="display" style="margin-bottom: 10px;">
+            <span style="display: block; font-size: 1.1rem; font-weight: 500; color: rgba(227,216,241,0.7); font-family: 'Inter', sans-serif;">💼 Professional</span>
+            <span id="rainbow-text" style="font-size: clamp(2.8rem, 8vw, 5rem); font-weight: 700; color: #FDFFFC; display: block;" class="hover:text-[#DAFF7D] transition-colors duration-300">Experience</span>
         </h1>
-        <p class="text-lg mb-8">All of my previous work experience, highlighted in one page</p>
+        <p style="font-size: 0.95rem; color: rgba(227,216,241,0.6); max-width: 480px;">Previous roles in data, analytics, and engineering — from research labs to community impact.</p>
     </div>
     <div id="gradient-overlay" class="opacity-0 pointer-events-none transition-opacity duration-300"></div>
 </header>
 {% endblock %}
 
 {% block body_content %}
-<div class="bg-transparent shadow-md rounded-md p-6 mb-6 grid gap-6 sm:grid-cols-1 md:grid-cols-2 opacity-100">
 
-    <!-- SNSC @ UTSC -->
-    <div class="bg-white opacity-85 border border-gray-200 rounded-md p-4 transition duration-300 ease-in-out transform hover:shadow-lg hover:-translate-y-1">
-        <h3 class="text-lg font-medium text-[#5f0f40] mb-2">Data Insights & Visualization Analyst</h3>
-        <p class="text-gray-800 font-bold mb-1"> Catholic Crosscultural Services | June 2023 - Present</p>
-        <p class="text-gray-800 italic mb-2">Scarborough Newcomer Settlement Collective Project (SNSC) | RStudio, PowerBI, RedCap</p>
-        <ul class="list-disc ml-6">
-            <li class="text-gray-800 mb-1">
-                Led data management for SNSC project with CCS. Orchestrated survey data extraction, cleaning, and filtering for accuracy. Developed engaging PowerBI and Tableau dashboards to visualize Statistics Canada Employment data, illustrating challenges of Toronto newcomers.
-            </li>
-            <li class="text-gray-800">
-                Transformed data for improved analysis efficiency. Created impactful RStudio visualizations to communicate trends in newcomer and immigrant needs, aiding stakeholder understanding.
-            </li>
-        </ul>
-    </div>
+<div class="max-w-6xl mx-auto">
+    <div class="section-eyebrow mb-6" style="padding: 0 4px;">Roles &amp; Responsibilities</div>
 
-    <!-- SDDH @ UTSC -->
-    <div class="bg-white opacity-85 border border-gray-200 rounded-md p-4 transition duration-300 ease-in-out transform hover:shadow-lg hover:-translate-y-1">
-        <h3 class="text-lg font-medium text-[#5f0f40] mb-2">Data QA</h3>
-        <p class="text-gray-800 font-bold mb-1"> University of Toronto | September 2023 - December 2023</p>
-        <p class="text-gray-800 italic mb-2">Service Delivery Data Hub (SDDH) Project | Jupyter Notebook, CSV, JSON, Python</p>
-        <ul class="list-disc ml-6">
-            <li class="text-gray-800 mb-1">
-                Established standardized QA procedures to ensure data accuracy and integrity in the NIC platform within the SDDH project.
-            </li>
-            <li class="text-gray-800">
-                Advocated for migrating to JSON format to enhance data management, storage, retrieval methods, and analytical compatibility. Improved code quality by implementing linting practices and transitioning code elements to standardized camelCase format.
-            </li>
-        </ul>
-    </div>
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-5">
 
-    <!-- Registrar's Office Project @ UTSC -->
-    <div class="bg-white opacity-85 border border-gray-200 rounded-md p-4 transition duration-300 ease-in-out transform hover:shadow-lg hover:-translate-y-1">
-        <h3 class="text-lg font-medium text-[#5f0f40] mb-2">Data Analyst</h3>
-        <p class="text-gray-800 font-bold mb-1"> University of Toronto | June 2023 - September 2023</p>
-        <p class="text-gray-800 italic mb-2">Registrar’s Office Admissions Project | Python, Flask, Javascript, RStudio</p>
-        <ul class="list-disc ml-6">
-            <li class="text-gray-800 mb-1">
-                Spearheaded the establishment and implementation of standardized QA procedures for data accuracy in the NIC platform within the SDDH project.
-            </li>
-            <li class="text-gray-800">
-                Advocated for technology migration to JSON format over CSV, optimizing data management, storage, retrieval methods, and compatibility for various analytical requirements. Improved code quality by implementing linting practices and transitioning code elements to standardized camelCase format.
-            </li>
-        </ul>
-    </div>
-
-    <!-- Sports Data @ UTSC -->
-        <div class="bg-white opacity-85 border border-gray-200 rounded-md p-4 transition duration-300 ease-in-out transform hover:shadow-lg hover:-translate-y-1">
-            <h3 class="text-lg font-medium text-[#5f0f40] mb-2">BRIDGE Student Assistant, Sports Data Lead</h3>
-            <p class="text-gray-800 font-bold mb-1"> University of Toronto | September 2022 - June 2023</p>
-            <p class="text-gray-800 italic mb-2">The BRIDGE Finance Lab | Python, SQL</p>
-            <ul class="list-disc ml-6">
-                <li class="text-gray-800 mb-1">
-                    Developed comprehensive Python scripts for a 4-Part Data Analytics Series; generated numerous helper functions to collect data from an API which was later exported to a csv for further analysis.                </li>
-                <li class="text-gray-800">
-                    Led an introductory SQL workshop, delivered to 25+ participants. Various databases were accessed through an online API, pertaining to the FIFA World Cup, to teach data cleaning and management.                </li>
+        <!-- SNSC @ Catholic Crosscultural Services -->
+        <div class="glass-card-exp p-5">
+            <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                <div>
+                    <div class="section-eyebrow" style="font-size: 0.65rem; margin-bottom: 4px;">Catholic Crosscultural Services</div>
+                    <h3 class="display" style="font-size: 1.05rem; font-weight: 700; color: #FDFFFC;">Data Insights & Visualization Analyst</h3>
+                </div>
+                <span class="tag-date">June 2023 – Present</span>
+            </div>
+            <p style="font-size: 0.8rem; color: rgba(227,216,241,0.55); font-style: italic; margin-bottom: 12px;">Scarborough Newcomer Settlement Collective (SNSC)</p>
+            <ul class="exp-list" style="list-style: none; padding: 0; margin: 0 0 14px;">
+                <li>Led data management for SNSC project with CCS. Orchestrated survey data extraction, cleaning, and filtering for accuracy.</li>
+                <li>Developed PowerBI and Tableau dashboards visualizing Statistics Canada Employment data, illustrating challenges of Toronto newcomers.</li>
+                <li>Created impactful RStudio visualizations to communicate trends in newcomer and immigrant needs for stakeholders.</li>
             </ul>
+            <div>
+                <span class="tag">RStudio</span>
+                <span class="tag">PowerBI</span>
+                <span class="tag">Tableau</span>
+                <span class="tag">RedCap</span>
+            </div>
         </div>
 
-</div>
+        <!-- SDDH @ University of Toronto -->
+        <div class="glass-card-exp p-5">
+            <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                <div>
+                    <div class="section-eyebrow" style="font-size: 0.65rem; margin-bottom: 4px;">University of Toronto</div>
+                    <h3 class="display" style="font-size: 1.05rem; font-weight: 700; color: #FDFFFC;">Data QA</h3>
+                </div>
+                <span class="tag-date">Sept – Dec 2023</span>
+            </div>
+            <p style="font-size: 0.8rem; color: rgba(227,216,241,0.55); font-style: italic; margin-bottom: 12px;">Service Delivery Data Hub (SDDH)</p>
+            <ul class="exp-list" style="list-style: none; padding: 0; margin: 0 0 14px;">
+                <li>Established standardized QA procedures to ensure data accuracy and integrity in the NIC platform.</li>
+                <li>Advocated for migrating to JSON format to enhance data management, storage, retrieval, and analytical compatibility.</li>
+                <li>Improved code quality via linting practices and transitioning code elements to standardized camelCase format.</li>
+            </ul>
+            <div>
+                <span class="tag">Jupyter Notebook</span>
+                <span class="tag">Python</span>
+                <span class="tag">JSON</span>
+                <span class="tag">CSV</span>
+            </div>
+        </div>
 
-  
-  
-  
-  
+        <!-- Registrar's Office @ University of Toronto -->
+        <div class="glass-card-exp p-5">
+            <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                <div>
+                    <div class="section-eyebrow" style="font-size: 0.65rem; margin-bottom: 4px;">University of Toronto</div>
+                    <h3 class="display" style="font-size: 1.05rem; font-weight: 700; color: #FDFFFC;">Data Analyst</h3>
+                </div>
+                <span class="tag-date">June – Sept 2023</span>
+            </div>
+            <p style="font-size: 0.8rem; color: rgba(227,216,241,0.55); font-style: italic; margin-bottom: 12px;">Registrar's Office Admissions Project</p>
+            <ul class="exp-list" style="list-style: none; padding: 0; margin: 0 0 14px;">
+                <li>Spearheaded establishment and implementation of standardized QA procedures for data accuracy in the NIC platform.</li>
+                <li>Advocated for technology migration to JSON format over CSV, optimizing data management, storage, and retrieval.</li>
+                <li>Improved code quality by implementing linting practices and transitioning to standardized camelCase format.</li>
+            </ul>
+            <div>
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">RStudio</span>
+            </div>
+        </div>
+
+        <!-- Sports Data @ BRIDGE Finance Lab -->
+        <div class="glass-card-exp p-5">
+            <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                <div>
+                    <div class="section-eyebrow" style="font-size: 0.65rem; margin-bottom: 4px;">University of Toronto</div>
+                    <h3 class="display" style="font-size: 1.05rem; font-weight: 700; color: #FDFFFC;">BRIDGE Student Assistant, Sports Data Lead</h3>
+                </div>
+                <span class="tag-date">Sept 2022 – June 2023</span>
+            </div>
+            <p style="font-size: 0.8rem; color: rgba(227,216,241,0.55); font-style: italic; margin-bottom: 12px;">The BRIDGE Finance Lab</p>
+            <ul class="exp-list" style="list-style: none; padding: 0; margin: 0 0 14px;">
+                <li>Developed comprehensive Python scripts for a 4-Part Data Analytics Series; built helper functions to collect API data and export to CSV for analysis.</li>
+                <li>Led an introductory SQL workshop to 25+ participants using FIFA World Cup databases to teach data cleaning and management.</li>
+            </ul>
+            <div>
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">APIs</span>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 {% endblock %}

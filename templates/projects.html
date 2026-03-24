@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
-{% block header_content %} 
-<header class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] text-[#E3D8F1] py-8 px-6 relative overflow-hidden">
+{% block header_content %}
+<header class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] text-[#E3D8F1] relative overflow-hidden hero-dots" style="padding: 64px 24px 48px;">
     <div class="max-w-6xl mx-auto flex flex-col text-left relative z-10">
-        <h1 class="text-5xl font-bold mb-4">
-        <span> 📊 Data Science <br></span>
-        <span id="rainbow-text" class="hover:bg-clip-text hover:text-transparent transition-all"><span class="sm:text-7xl md:text-8xl font-extrabold hover:text-[#DAFF7D]">Projects</span></span>
+        <div class="section-eyebrow mb-3">Work · Portfolio</div>
+        <h1 class="display" style="margin-bottom: 10px;">
+            <span style="display: block; font-size: 1.1rem; font-weight: 500; color: rgba(227,216,241,0.7); font-family: 'Inter', sans-serif;">📊 Data Science</span>
+            <span id="rainbow-text" style="font-size: clamp(2.8rem, 8vw, 5rem); font-weight: 700; color: #FDFFFC; display: block;" class="hover:text-[#DAFF7D] transition-colors duration-300">Projects</span>
         </h1>
-        <p class="text-lg mb-8">In this page, you'll find some of the data science projects I've worked on, including personal projects and coursework.</p>
+        <p style="font-size: 0.95rem; color: rgba(227,216,241,0.6); max-width: 480px;">Personal projects and coursework — from predictive modeling to classification, built with real datasets.</p>
     </div>
     <div id="gradient-overlay" class="opacity-0 pointer-events-none transition-opacity duration-300"></div>
 </header>
@@ -15,10 +16,14 @@
 
 {% block body_content %}
 
-<div class="grid lg:grid-cols-3 sm:grid-cols-1">
-    {% for project in projects %}
-    {% include 'components/projects_card.html' %}
-    {% endfor %}
+<div class="max-w-6xl mx-auto">
+    <div class="section-eyebrow mb-6" style="padding: 0 4px;">Selected Work</div>
+
+    <div class="grid lg:grid-cols-3 sm:grid-cols-1 gap-5">
+        {% for project in projects %}
+        {% include 'components/projects_card.html' %}
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

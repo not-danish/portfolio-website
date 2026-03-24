@@ -3,9 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>`
-    <title>Danish Siddiqui - Data Scientist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <meta name="description" content="Danish Siddiqui — Data Scientist and Machine Learning practitioner. Master's in Management Analytics at Rotman School of Management. Skilled in Python, R, SQL, Machine Learning, Generative AI, LLMs, RAG, and Business Intelligence.">
+    <meta name="keywords" content="Data Scientist, Machine Learning, Generative AI, LLM, Data Analyst, Python, R, SQL, Business Intelligence, Analytics, NLP, Deep Learning, Predictive Modeling, RAG, LangChain, Management Analytics, Rotman, University of Toronto, Danish Siddiqui">
+    <title>Danish Siddiqui | Data Scientist | Machine Learning | Generative AI</title>
+    <style>
+        *, *::before, *::after { font-family: 'Inter', system-ui, sans-serif; box-sizing: border-box; }
+        h1, h2, h3, h4, h5, h6, .display { font-family: 'Space Grotesk', sans-serif; }
+
+        /* Glass card — dark, used for skills/projects (no backdrop-filter: avoids scroll jank) */
+        .glass-card {
+            background: rgba(55, 6, 34, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(55, 6, 34, 0.88);
+            border-color: rgba(251, 139, 36, 0.45);
+            transform: translateY(-5px);
+            box-shadow: 0 24px 48px rgba(0,0,0,0.3), 0 0 32px rgba(251, 139, 36, 0.08);
+        }
+        /* Gen AI card highlight variant */
+        .glass-card-ai {
+            background: rgba(40, 5, 24, 0.7);
+            border: 1px solid rgba(218, 255, 125, 0.22);
+            border-radius: 14px;
+            transition: all 0.3s ease;
+        }
+        .glass-card-ai:hover {
+            background: rgba(40, 5, 24, 0.88);
+            border-color: rgba(218, 255, 125, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25), 0 0 40px rgba(218, 255, 125, 0.06);
+        }
+        /* Experience card — with orange left border */
+        .glass-card-exp {
+            background: rgba(30, 4, 20, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-left: 3px solid rgba(251, 139, 36, 0.55);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .glass-card-exp:hover {
+            background: rgba(30, 4, 20, 0.72);
+            border-left-color: #fb8b24;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
+        /* Skill tags */
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            background: rgba(143, 227, 136, 0.15);
+            color: #8FE388;
+            border: 1px solid rgba(143, 227, 136, 0.25);
+            margin: 2px;
+        }
+        .tag-ai {
+            background: rgba(218, 255, 125, 0.12);
+            color: #DAFF7D;
+            border: 1px solid rgba(218, 255, 125, 0.25);
+        }
+        .tag-date {
+            background: rgba(251, 139, 36, 0.12);
+            color: #fb8b24;
+            border: 1px solid rgba(251, 139, 36, 0.28);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* Navigation */
+        .nav-link {
+            position: relative;
+            color: rgba(253, 255, 252, 0.75);
+            transition: color 0.25s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #DAFF7D;
+            border-radius: 2px;
+            transition: width 0.25s ease;
+        }
+        .nav-link:hover { color: #FDFFFC; }
+        .nav-link:hover::after { width: 100%; }
+        .nav-resume {
+            background: rgba(218, 255, 125, 0.1);
+            border: 1px solid rgba(218, 255, 125, 0.32);
+            color: #DAFF7D;
+            padding: 5px 16px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+        .nav-resume:hover {
+            background: rgba(218, 255, 125, 0.22);
+            border-color: #DAFF7D;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #5F0F40;
+            padding: 11px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .btn-primary:hover {
+            background: #5F0F40;
+            color: #FDFFFC;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: transparent;
+            color: #DAFF7D;
+            padding: 11px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            border: 1.5px solid rgba(218, 255, 125, 0.45);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .btn-outline:hover {
+            background: rgba(218, 255, 125, 0.1);
+            border-color: #DAFF7D;
+            transform: translateY(-2px);
+        }
+
+        /* Section eyebrow label */
+        .section-eyebrow {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #DAFF7D;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .section-eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 2px;
+            background: #DAFF7D;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Hero gradient name */
+        .gradient-name {
+            background: linear-gradient(110deg, #FDFFFC 20%, #fb8b24 55%, #DAFF7D 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+
+        /* Cursor blink on aspiring text */
+        #aspiring_text::after {
+            content: ' |';
+            color: #DAFF7D;
+            font-weight: 300;
+            animation: blink 1.1s step-end infinite;
+        }
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        /* Dot grid hero texture — uses ::before so it layers over the gradient without overriding it */
+        .hero-dots::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Experience list */
+        .exp-list li {
+            position: relative;
+            padding-left: 16px;
+            color: rgba(253, 255, 252, 0.82);
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin-bottom: 6px;
+        }
+        .exp-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: rgba(251, 139, 36, 0.7);
+            font-size: 0.8rem;
+        }
+
+        /* Project card topic badge */
+        .topic-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #DAFF7D;
+            margin-bottom: 10px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -14,44 +256,31 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-E3TNCLX431');
 </script>
 
-<nav class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] py-4 fixed top-0 w-full z-50 left-0">
+<nav style="background: rgba(16, 2, 12, 0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.07);" class="fixed top-0 left-0 right-0 w-full z-50 py-4">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-6">
-      <!-- Logo -->
-      <a href="/" class="text-[#FDFFFC] hover:text-[#fb8b24] text-lg font-semibold">Danish!</a>
-      
-      <!-- Menu items -->
-      <ul class="flex space-x-4">
-        <li>
-            <a href="/" class="text-[#FDFFFC] hover:text-[#5F0F40] transition duration-300 ease-in-out">Home</a>
-        </li>
-        <li>
-          <a href="/experience" class="text-[#FDFFFC] hover:text-[#5F0F40] transition duration-300 ease-in-out">Experience</a>
-        </li>
-        <li>
-          <a href="/projects/data" class="text-[#FDFFFC] hover:text-[#5F0F40] transition duration-300 ease-in-out">Data Science</a>
-        </li>
-        <li>
-          <a href="/projects/webdev" class="text-[#FDFFFC] hover:text-[#5F0F40] transition duration-300 ease-in-out">Web Dev</a>
-        </li>
-        <li>
-          <a href="https://drive.google.com/file/d/1fkJfrJuDmNi9PlGol7IoGykNODZ65XoX/view?usp=sharing" class="text-[#FDFFFC] hover:text-[#5F0F40] transition duration-300 ease-in-out">Resume</a>
-        </li>
-      </ul>
+        <a href="/" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; color: #FDFFFC; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#DAFF7D'" onmouseout="this.style.color='#FDFFFC'">Danish!</a>
+        <ul style="display: flex; align-items: center; gap: 24px; list-style: none; margin: 0; padding: 0;">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/experience" class="nav-link">Experience</a></li>
+            <li><a href="/projects/data" class="nav-link">Data Science</a></li>
+            <li><a href="/projects/webdev" class="nav-link">Web Dev</a></li>
+            <li><a href="https://drive.google.com/file/d/1fkJfrJuDmNi9PlGol7IoGykNODZ65XoX/view?usp=sharing" class="nav-resume">Resume ↗</a></li>
+        </ul>
     </div>
-  </nav>
+</nav>
 
     {% block header_content %} {% endblock %}
-<body class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] text-[#E3D8F1] py-12 px-6 relative ">
-    
+<body class="bg-gradient-to-r from-[#5f0f40] to-[#fb8b24] text-[#E3D8F1] pt-20 pb-16 px-6 relative min-h-screen">
+
 {% block body_content %} {% endblock %}
 </body>
 
-<footer class="fixed bottom-0 w-full text-sm text-center py-2">
-    Curious about how I used Flask to make this website? Click <a class = "hover:text-[#5f0f40]"href="https://github.com/not-danish/portfolio-website">here</a>!
+<footer style="background: rgba(16, 2, 12, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.06);" class="w-full text-sm text-center py-4">
+    <span style="color: rgba(227, 216, 241, 0.45);">Built with Flask + Python  ·  </span>
+    <a style="color: #DAFF7D; text-decoration: none; transition: color 0.2s;" href="https://github.com/not-danish/portfolio-website" onmouseover="this.style.color='#fb8b24'" onmouseout="this.style.color='#DAFF7D'">View source on GitHub ↗</a>
 </footer>
 
 </html>
